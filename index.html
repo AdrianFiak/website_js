@@ -3,10 +3,31 @@
     <head>
         <title>JS</title>
         <link rel="stylesheet" href="css/style.css">
-        <link rel="javascript" href="js/javascript.js">
+        <script src="js/script.js" defer></script>
         <link rel="icon" href="alien.png" type="image/x-icon">
+        <script>
+
+
+
+            document.addEventListener('DOMContentLoaded', () => {
+                function createParagraph() {
+                    const para = document.createElement('p');
+                    para.textContent = 'You clicked the button!';
+                    document.body.appendChild(para);
+                }
+
+                const buttons = document.querySelectorAll('button');
+
+                for (const button of buttons) {
+                    button.addEventListener('click', createParagraph);
+                    }
+            });
+
+
+
+        </script>
     </head>
     <body>
-        
+        <button>Click me</button>
     </body>
 </html>
