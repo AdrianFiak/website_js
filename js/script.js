@@ -1,19 +1,21 @@
-// Function: creates a new paragraph and appends it to the bottom of the HTML body.
-function createParagraph() {
-    const para = document.createElement('p');
-    para.textContent = 'You clicked the button!';
-    document.body.appendChild(para);
-  }
-  /*
-  1. Get references to all the buttons on the page in an array format.
-  2. Loop through all the buttons and add a click event listener to each one.
+let myName = 'Adi';
+let myAge = 41;
+let myPhoneNumber='0723532975';
+let myMail= 'adrian.fiak@yahoo.ro';
+console.log ('Nume:   ',myName);
+console.log ('Varsta: ',myAge);
+console.log ('Tel:    ',myPhoneNumber);
+console.log ('E-mail: ',myMail);
 
-  When any button is pressed, the createParagraph() function will be run.
-*/
-  const buttons = document.querySelectorAll('button');
-  
-  for (const button of buttons) {
-    button.addEventListener('click', createParagraph);
-  }
-  
+let nume=['Adi', 'Edi', 'Florin', 'Andrea'];
+console.log('Nume copil:',nume[1]);
+console.log('Nume frate:',nume[2]);
+
+let dog = { numeCaine : 'Lucky', rasa : 'Canis' }; //acesta este un obiect
+console.log('Nume caine:',dog.numeCaine);
+console.log('Rasa:',dog.rasa);
  
+let nrMeu=500;
+console.log(nrMeu, typeof nrMeu);
+let nrNou='500';
+console.log(nrNou, typeof nrNou);
