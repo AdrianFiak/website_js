@@ -1,19 +1,15 @@
 let myName = 'Adi';
 let myAge = 41;
 let myPhoneNumber='0723532975';
-let myMail= 'adrian.fiak@yahoo.ro';
 console.log ('Nume:   ',myName);
 console.log ('Varsta: ',myAge);
 console.log ('Tel:    ',myPhoneNumber);
-console.log ('E-mail: ',myMail);
 
 let nume=['Adi', 'Edi', 'Florin', 'Andrea'];
 console.log('Nume copil:',nume[1]);
-console.log('Nume frate:',nume[2]);
 
 let dog = { numeCaine : 'Lucky', rasa : 'Canis' }; //acesta este un obiect
 console.log('Nume caine:',dog.numeCaine);
-console.log('Rasa:',dog.rasa);
  
 let nrMeu=500;
 console.log(nrMeu, typeof nrMeu);
@@ -33,3 +29,26 @@ const myInt = 5;
 const myFloat = 6.667;
 const douaZecimale = myFloat.toFixed(2);
 console.log(douaZecimale);
+
+let cifra='5';
+cifra=Number(cifra)**2;//converteste valoarea cifrei din string in number
+console.log(cifra);
+
+let nr1=1;
+nr1++;//creste valoarea variabilei nr1 cu 1 (increment)
+nr1--;//scade valoarea variabilei nr1 cu 1 (decrement)
+console.log(nr1);
+
+let x=3;
+let y=4;
+x=y;//acum x=y adica va lua valoarea lui Y (4)
+console.log (x);
+
+let a=5;
+a+=3;//adauga 3 la varloarea variabilei a                 a=a+3;
+a-=2;//scade 2 la valoarea variabilei a                   a=a-2;
+a*=2;//inmulteste valoarea variabilei a cu 2              a=a*2;
+a/=3;//inparte valoarea variabilei a la 3                 a=a/3;
+//in final variabila a va avea valoarea 4
+console.log(a);
+
