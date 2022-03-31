@@ -52,3 +52,59 @@ a/=3;//inparte valoarea variabilei a la 3                 a=a/3;
 //in final variabila a va avea valoarea 4
 console.log(a);
 
+const txt='I\'ve been there!';
+console.log(txt);
+
+const numele='Adrian';
+const bunvenit=`Bine ai venit ${numele} !`;//In acest caz (concatenate strings) particularitatea este utilizarea ghilimelelor de tipul backtick characters (``)
+console.log(bunvenit);
+console.log("Bine ai venit "+numele+" !");
+console.log(`Bine ai venit ${numele} !`);
+
+const sir='123';
+const sirNr=Number(sir);//defineste o noua constanta la care atribuie valoarea constantei vechi si o modifica din sir(string) in numar
+console.log(sirNr,typeof sirNr);
+
+const nrTel=0723532975;
+const txtTel=nrTel.toString();//defineste o noua constanta la care atribuie valoarea constantei vechi si o modifica din numar in sir(string)
+console.log(txtTel,typeof txtTel);
+
+const melodie='The Unforgiven';
+const nota=9;
+const notaMax=10;
+const rez=`Imi place melodia "${melodie}".
+Ii acord un scor de ${nota/notaMax*100}%`;//including expresion in strigs (multiline strings - functioneaza si cu \n)
+console.log(rez);
+
+const lungime='Acesta este un STRING';
+const nrCar=lungime.length;
+console.log(nrCar);
+console.log(lungime[lungime.length-2]);
+
+if (lungime.includes('stra')){//includes()
+    console.log('valoarea constantei lungime contine "stra"');
+}else{
+    console.log('valoarea constantei lungime NU contine "stra"');
+}
+
+if (lungime.startsWith('aces')){//startsWith()
+    console.log('valoarea constantei lungime incepe cu "aces"');
+}else{
+    console.log('valoarea constantei lungime NU incepe cu "aces"');
+}
+
+if (lungime.endsWith('ing')){//endsWith()
+    console.log('valoarea constantei lungime se termina cu "ing"');
+}else{
+    console.log('valoarea constantei lungime NU se termina cu "ing"');
+}
+
+console.log(lungime.slice(0,4));//   slice()  -- se vor extrage caracterele 0,1,2 si 3
+console.log(lungime.slice(4));//se vor extrage toate caracterele incepand cu 4
+
+console.log(lungime.toLowerCase());
+console.log(lungime.toUpperCase());
+
+const lung=lungime.replace('Acesta','Asta');//replace()   inlocuieste un substrig cu altul
+console.log(lung);
+console.log(lungime.replace('Acesta','Aista'));
