@@ -69,7 +69,7 @@ const sir='123';
 const sirNr=Number(sir);//defineste o noua constanta la care atribuie valoarea constantei vechi si o modifica din sir(string) in numar
 console.log(sirNr,typeof sirNr);
 
-const nrTel=0723532975;
+const nrTel=723532975;
 const txtTel=nrTel.toString();//defineste o noua constanta la care atribuie valoarea constantei vechi si o modifica din numar in sir(string)
 console.log(txtTel,typeof txtTel);
 
