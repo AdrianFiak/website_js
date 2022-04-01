@@ -44,13 +44,17 @@ let y=4;
 x=y;//acum x=y adica va lua valoarea lui Y (4)
 console.log (x);
 
-let a=5;
-a+=3;//adauga 3 la varloarea variabilei a                 a=a+3;
-a-=2;//scade 2 la valoarea variabilei a                   a=a-2;
-a*=2;//inmulteste valoarea variabilei a cu 2              a=a*2;
-a/=3;//inparte valoarea variabilei a la 3                 a=a/3;
+let c=5;
+c+=3;//adauga 3 la varloarea variabilei a                 c=c+3;
+c-=2;//scade 2 la valoarea variabilei a                   c=c-2;
+c*=2;//inmulteste valoarea variabilei a cu 2              c=c*2;
+c/=3;//inparte valoarea variabilei a la 3                 c=c/3;
 //in final variabila a va avea valoarea 4
-console.log(a);
+console.log(c);
+
+
+                                                        // de aici incepe partea de texte
+
 
 const txt='I\'ve been there!';
 console.log(txt);
@@ -79,7 +83,7 @@ console.log(rez);
 const lungime='Acesta este un STRING';
 const nrCar=lungime.length;
 console.log(nrCar);
-console.log(lungime[lungime.length-2]);
+console.log(lungime[lungime.length-2]);//din valoarea variabilei "lungime" va cauta penultima pozitie din cadrul stringuli
 
 if (lungime.includes('stra')){//includes()
     console.log('valoarea constantei lungime contine "stra"');
@@ -108,3 +112,6 @@ console.log(lungime.toUpperCase());
 const lung=lungime.replace('Acesta','Asta');//replace()   inlocuieste un substrig cu altul
 console.log(lung);
 console.log(lungime.replace('Acesta','Aista'));
+console.log(lungime.indexOf('S'));         //       indexOf()       gaseste indexul lui S in stringul constantei "lungime"
+
+
