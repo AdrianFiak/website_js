@@ -103,15 +103,87 @@ if (lungime.endsWith('ing')){//endsWith()
     console.log('valoarea constantei lungime NU se termina cu "ing"');
 }
 
-console.log(lungime.slice(0,4));//   slice()  -- se vor extrage caracterele 0,1,2 si 3
+console.log(lungime.slice(0,4));                //   slice()  -- se vor extrage caracterele 0,1,2 si 3
 console.log(lungime.slice(4));//se vor extrage toate caracterele incepand cu 4
 
 console.log(lungime.toLowerCase());
 console.log(lungime.toUpperCase());
 
-const lung=lungime.replace('Acesta','Asta');//replace()   inlocuieste un substrig cu altul
+const lung=lungime.replace('Acesta','Asta');   //    replace()   inlocuieste un substrig cu altul
 console.log(lung);
 console.log(lungime.replace('Acesta','Aista'));
 console.log(lungime.indexOf('S'));         //       indexOf()       gaseste indexul lui S in stringul constantei "lungime"
 
 
+
+                                                // de aici incepe zona de ARRAYS
+
+const shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+console.log(shopping);
+const matrice = [1,2,3,'adi',shopping,[4,5,6]];
+console.log(matrice);
+console.log(shopping[0]);
+shopping[0]='pizza';           // modifica valoarea unui element din array
+console.log(shopping[0]);
+console.log(matrice[4][1]);
+console.log(shopping.indexOf('cheese'));      //   indexOf()    returneaza indexul(pozitia) la care se afla un element in cadrul unui array (indexarea incepe de la zero)
+
+shopping.push('onion','melon');               //   push()       adauga un element la sfarsitul unui ARRAY
+shopping.unshift('paine');                    //   unshift()    adauga un element la inceputul unui ARRAY
+
+shopping.pop();                               //   pop()        sterge ultimul element dintr-un ARRAY
+shopping.shift();                             //   shift()      sterge primul  element dontr-un ARRAY
+shopping.splice(2,1);                         //   splice()     sterge elemente din continutul unui ARRAY specificand indexul de la care sterge,
+                                              //                       si numarul de elemente (in acest caz un element de la indexul 2)      -- slice() extrage si splice() sterge
+console.log(shopping);                        
+
+for (product of shopping){                    // for..of acceseaza fiecare element din ARRAY(matrice)
+    console.log(product);
+}
+
+const arie=[2,3,4,5];
+function dublare(arie){
+    return arie*2;
+}
+const arieDublata=arie.map(dublare);         //    map()      aplica functia dublare la fiecare element din arie
+console.log(arieDublata);
+
+console.log(shopping);
+
+function filtrare(shopping){
+    return shopping.length>5;                  //     return   reprezinta rezultatul conditiei: lungimea mai mare decat 5
+}
+const shoppingLung=shopping.filter(filtrare);   //    filter()    aplica functia filtrare la fiecare element din arie si filtreaza doar elementele care indeplinesc conditia functiei (lungimea elementului este mai mare decat 5)
+console.log(shoppingLung);
+
+
+//Converting between strings and arrays:
+const data = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
+const cities=data.split(',');                  //    split()    ia stringul atribuit constantei data si il imparte la fiecare virgula in substringuri atribuite constantei cities formand o arie (array)
+console.log(data);
+console.log(cities);
+const dataNou=cities.join(',');                //    join()     este inversul functiei split(); ia elementele ariei si le imbina intr-un string(sir) fiind delimitate de operatorul definit intre parantezele functiei join()
+console.log(dataNou);
+
+const arieJoin=arie.join('--');
+console.log(arieJoin);
+
+
+
+
+const myArray = [ "Ryu", "Ken", "Chun-Li", "Cammy", "Guile", "Sakura", "Sagat", "Juri" ];
+
+         
+ 
+
+function indexare (myArray){
+    for (luptator of myArray){
+        let index=myArray.indexOf(luptator);
+        let luptatorI=`${luptator}(${index})`;
+        console.log(luptatorI);  
+        return myArray+`(${index})`;
+}
+}
+const myArrayIndexata=myArray.map(indexare);
+console.log(myArrayIndexata);
+    
