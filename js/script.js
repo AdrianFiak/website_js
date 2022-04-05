@@ -85,19 +85,19 @@ const nrCar=lungime.length;
 console.log(nrCar);
 console.log(lungime[lungime.length-2]);//din valoarea variabilei "lungime" va cauta penultima pozitie din cadrul stringuli
 
-if (lungime.includes('stra')){//includes()
+if (lungime.includes('stra')){                    //      includes()
     console.log('valoarea constantei lungime contine "stra"');
 }else{
     console.log('valoarea constantei lungime NU contine "stra"');
 }
 
-if (lungime.startsWith('aces')){//startsWith()
+if (lungime.startsWith('aces')){                  //      startsWith()
     console.log('valoarea constantei lungime incepe cu "aces"');
 }else{
     console.log('valoarea constantei lungime NU incepe cu "aces"');
 }
 
-if (lungime.endsWith('ing')){//endsWith()
+if (lungime.endsWith('ing')){                    //        endsWith()
     console.log('valoarea constantei lungime se termina cu "ing"');
 }else{
     console.log('valoarea constantei lungime NU se termina cu "ing"');
@@ -177,3 +177,23 @@ for (nume of myArray){
     myArray[index]=`${nume} (${index})`;
 }
 console.log(myArray);
+
+
+//Find the index of the "Eagles" item, and use that to remove the "Eagles" item.
+//Make a new array from this one, called eBirds, that contains only birds from the original array whose names begin with the letter "E". 
+//Note that startsWith() is a great way to check whether a string starts with a given character.
+//If it works, you should see "Emus,Egrets" appear in the page.
+const birds = [ "Parrots", "Falcons", "Eagles", "Emus", "Caracaras", "Egrets" ];
+console.log(birds);
+let index=birds.indexOf('Eagles');
+console.log(index);
+birds.splice(index,1);
+console.log(birds);
+
+function select(birds){
+    return birds.startsWith('E');
+}
+let eBirds=birds.filter(select);
+console.log(eBirds);
+
+
