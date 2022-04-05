@@ -172,18 +172,8 @@ console.log(arieJoin);
 
 
 const myArray = [ "Ryu", "Ken", "Chun-Li", "Cammy", "Guile", "Sakura", "Sagat", "Juri" ];
-
-         
- 
-
-function indexare (myArray){
-    for (luptator of myArray){
-        let index=myArray.indexOf(luptator);
-        let luptatorI=`${luptator}(${index})`;
-        console.log(luptatorI);  
-        return myArray+`(${index})`;
+for (nume of myArray){
+    let index=myArray.indexOf(nume);
+    myArray[index]=`${nume} (${index})`;
 }
-}
-const myArrayIndexata=myArray.map(indexare);
-console.log(myArrayIndexata);
-    
+console.log(myArray);
