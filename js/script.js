@@ -156,6 +156,13 @@ function filtrare(shopping){
 const shoppingLung=shopping.filter(filtrare);   //    filter()    aplica functia filtrare la fiecare element din arie si filtreaza doar elementele care indeplinesc conditia functiei (lungimea elementului este mai mare decat 5)
 console.log(shoppingLung);
 
+const numere=[3,5,8,4,9,11,14];
+console.log('numere: ',numere);
+const numerePare=numere.filter(function(numar){
+    if(numar%2===0){return numar}
+});
+console.log('numere pare: ',numerePare);
+
 
 //Converting between strings and arrays:
 const data = 'Manchester,London,Liverpool,Birmingham,Leeds,Carlisle';
@@ -196,4 +203,26 @@ function select(birds){
 let eBirds=birds.filter(select);
 console.log(eBirds);
 
+const grades=[10,8,13];
+grades.forEach(                                      //    array.forEach(callback) aplica o functie/conditie pentru fiecar element al unui array
+    function (grades){
+        grades+=1;                                   //    callback function
+        console.log(grades);
+}
+);
 
+let sum=0;
+function insumareGrades(grades){
+grades.forEach(function(grade){                       //    forEach() - callback function              array.filter(callback)
+    sum = sum+grade;
+    console.log(grade);
+});
+return sum;
+}
+console.log(insumareGrades([10,20,30,40]));
+
+const finds=['Adi','Edi','Andrea'];
+const findEdi=finds.find(function(cop){               //    array.find(callback)   este o metoda similara cu filter doar ca aplica conditia functiei callback doar pana la primul element care indeplineste conditia functiei (true) 
+    return cop==='Edi';
+});
+console.log(findEdi);
