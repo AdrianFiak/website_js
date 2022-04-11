@@ -207,7 +207,7 @@ const grades=[10,8,13];
 grades.forEach(                                      //    array.forEach(callback) aplica o functie/conditie pentru fiecar element al unui array
     function (grades){
         grades+=1;                                   //    callback function
-        console.log(grades);
+        console.log('grades: ',grades);
 }
 );
 
@@ -226,3 +226,12 @@ const findEdi=finds.find(function(cop){               //    array.find(callback)
     return cop==='Edi';
 });
 console.log(findEdi);
+
+const array=[2,4,6,8];
+const arrayDublat=array.map(function(nr){             //     array.map(callback)   is an array method la fel ca si find, forEach, etc.
+    return nr*2;
+});
+console.log('arrayDublat cu "array.map(callback)": ',arrayDublat);
+
+const includes=arrayDublat.includes(16);             //      array.includes(item) is an array method care verifica daca un array include un item si returneaza valoarea true sau false dupa caz
+console.log(includes);
