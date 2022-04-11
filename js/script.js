@@ -235,3 +235,23 @@ console.log('arrayDublat cu "array.map(callback)": ',arrayDublat);
 
 const includes=arrayDublat.includes(16);             //      array.includes(item) is an array method care verifica daca un array include un item si returneaza valoarea true sau false dupa caz
 console.log(includes);
+
+
+
+
+let fruct ='banana';
+
+switch(fruct){
+
+case 'banana':
+    console.log('Banana costa 1 leu!');
+   break;
+
+case 'mar':
+    console.log('Marul costa 50 de bani!');
+   break;
+
+   default:
+       console.log('Introduceti fructul!');
+
+};
