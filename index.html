@@ -28,7 +28,32 @@
 
         </script>
         -->
-        
+        <style>
+            .rosu{
+                background-color: red;
+                color: yellow;
+                width: 300px;
+                font-size: 25px;
+                text-align: center;
+            }
+
+
+            /* pentru lista de cumparaturi: */
+            li {
+                 margin-bottom: 10px;
+            }
+
+            li button {
+                font-size: 8px;
+                margin-left: 20px;
+                color: #666;
+            }
+
+
+
+
+        </style>
+
     </head>
     <body>
 
@@ -39,9 +64,71 @@
         <!--Manipulating the DOM with JS: -->
                
         <script>
-            const link = document.querySelector('a'); //selecteaza linkul si il atribuie variabilei "link"
+            const link = document.querySelector('a');    //selecteaza linkul si il atribuie variabilei "link"
             link.textContent='modifica textul linkului'; //nu mai este Mozilla homepage ci "modifica textul linkului"
             link.href='http:\\www.google.ro';            //nu mai este mozilla.org ci google.ro
+
+            const sect=document.querySelector('section');   //selecteaza section
+            const para=document.createElement('p');         //creaza un nou paragraf atribuit variabilei para
+            para.textContent='Acesta este un nou paraghraf creat din JS';   //defineste textul noului paragraf atribuit variabilei para
+            sect.appendChild(para);                          //creaza in variabila sect un copil atribuit variabilei para (posteaza paragraful i sectiune)
+
+
+            const text=document.createTextNode('Create a textNode');   //creaza nota de text in variabila text
+            const linkPara = document.querySelector('p');             //selecteaza paragraful si il atribuiei variabilei linkPara
+            linkPara.appendChild(text);                                //adauga copilul variabilei text la variabila linkPara (adauga textul la paragraf) -vad ca la primul paragraf!!!
+
+            //Moving and removing elements
+
+            sect.appendChild(linkPara);                          //muta primul paragraf care contine linkul in partea de jos a sectiunii
+            sect.removeChild(linkPara);                          // sterge paragraful care contine linkul---sau
+            linkPara.remove();                                   // sterge paragraful care contine linkul
+
+
+            //manipularea css cu JS
+            /*
+            para.style.color = 'white';
+            para.style.backgroundColor = 'blue';
+            para.style.padding = '10px';
+            para.style.width = '300px';
+            para.style.textAlign = 'center';
+            para.style.fontSize='25px';
+            */
+
+            para.setAttribute('class','rosu');
+
+
+
+
+
+        </script>
+
+
+
+
+
+        <!--pentru lista de cumparaturi: -->
+
+        <h1>My shopping list</h1>
+
+            <div>
+                <label for="item">Enter a new item:</label>
+                <input type="text" name="item" id="item">
+                <button>Add item</button>
+            </div>
+
+        <ul>
+
+        </ul>
+
+        <script>
+
+
+
+
+
+
+
 
         </script>
 
