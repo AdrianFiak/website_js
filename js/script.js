@@ -137,7 +137,7 @@ shopping.splice(2,1);                         //   splice()     sterge elemente 
                                               //                       si numarul de elemente (in acest caz un element de la indexul 2)      -- slice() extrage si splice() sterge
 console.log(shopping);                        
 
-for (product of shopping){                    // for..of acceseaza fiecare element din ARRAY(matrice)
+for (product of shopping){                    //   for((produs of produse){} acceseaza fiecare element(produs) din (produse)ARRAY(matrice)
     console.log(product);
 }
 
@@ -255,3 +255,19 @@ case 'mar':
        console.log('Introduceti fructul!');
 
 };
+
+
+for (let q=1;q<10;q++){                                           //   for(initializer; condition; final-expression){}
+    console.log(`${q} x ${q} = ${q*q}`);
+};
+
+for (w=1;w<11;w++){console.log(`5 x ${w} = ${5*w}`)};  // tabla inmultirii cu 5
+let e=0;
+while (e<5){                                                      //   while(a<5){}  atata timp cat a<5 executa{}           (verifica apoi executa) 
+    e+=1;               
+    console.log(e);                                               //    do{}while(a<5)  executa atata timp cat a<5          (se executa cel putin odata)
+};
+
+//loops:   for;   for...of;    while;    do...while
+
+
