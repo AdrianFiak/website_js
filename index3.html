@@ -25,30 +25,22 @@
     </section>
 
   </body>
+
   <script>
-    let i = 500;
-    const para = document.createElement('p');
-
-    function isPrime(num) {
-      for(let i = 2; i < num; i++) {
-        if(num % i === 0) {
-          return false;
-        }
-      }
-
-      return true;
-    }
+   //scrieti un cod care sa afiseze numerele pare de la 0 la 100
+    const section=document.querySelector('section');
+    const para=document.createElement('p');
 
 
-    // Add your code here
+    let array='';
+   for (let numar=0; numar<101; numar++ ) {
+       if (numar%2===0){
+        array+=`; ${numar}`;
+   }};
+   
+   para.textContent=array;
+   section.appendChild(para);
 
-
-
-    
-
-    // Don't edit the code below here!
-    const section = document.querySelector('section');
-    section.appendChild(para);
   </script>
 
 </html>
